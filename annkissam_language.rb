@@ -49,10 +49,6 @@ class AnnkissamLanguage
   end
 
   def valid_word?(word)
-    if (NOUNS + VERBS + ARTICLES).any? { |valid_word| valid_word == word }
-      true
-    else
-      false
-    end
+    (NOUNS + VERBS + ARTICLES).any? { |valid_word| valid_word == word }
   end
 end
