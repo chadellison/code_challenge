@@ -101,6 +101,13 @@ describe AnnkissamLanguage do
         expect(annkissam_language.two_articles?(sentence)).to be true
       end
     end
+
+    context "when it has exactly two articles" do
+      it "returns true" do
+        sentence = "ac a"
+        expect(annkissam_language.two_articles?(sentence)).to be true
+      end
+    end
   end
 
   describe "has_type?" do

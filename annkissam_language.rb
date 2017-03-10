@@ -11,11 +11,7 @@ class AnnkissamLanguage
   end
 
   def two_articles?(sentence)
-    sentence = sentence.split
-
-    sentence.include?("a") && sentence.include?("ac") ||
-    sentence.include?("a") && sentence.include?("e") ||
-    sentence.include?("ac") && sentence.include?("e")
+    (sentence.split & ["a", "ac", "e"]).count > 1
   end
 
   def has_type?(sentence, type)
