@@ -36,8 +36,8 @@ class AnnkissamLanguage
     valid_words = []
 
     string.length.times do |count|
-      (string.length - count).times do |index|
-        word = string[count..(count + index)]
+      (string.length).times do |index|
+        word = string[count..index]
 
         if valid_word?(word)
           valid_words << word
